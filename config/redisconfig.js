@@ -2,7 +2,7 @@ const {createClient}=require('redis')
 //note o createclient nai hunu pardo raixa yo function jasto vanae ra bhujam na
 const dotenv=require("dotenv")
 
-dotenv.config({path:"./config/config.env"})
+dotenv.config({path:"./.env"})
 
 
 

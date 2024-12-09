@@ -7,7 +7,7 @@ const PORT=process.env.PORT || 4001;
 
 
 // Load environment variables
-dotenv.config({ path: "./config/config.env" });
+dotenv.config({ path: "./.env" });
 
 // Connect to the database
 connectDatabase();

@@ -2,7 +2,7 @@ const { connectRedis } = require("../config/redisconfig")
 const Product=require("../models/productModel")
 const dotenv=require("dotenv")
 
-dotenv.config({path:"./config/config.env"})
+dotenv.config({path:"./.env"})
 
 
 

@@ -1,10 +1,12 @@
-const mongoose=require("mongoose")
 const dotenv=require("dotenv")
+const mongoose=require("mongoose")
 
-dotenv.config({path:"./config/config.env"})
+
+dotenv.config({path:"./.env"})
 
 
 const connectdatabase=()=>{
+    
     mongoose.connect(process.env.DB_URL,{
         
         

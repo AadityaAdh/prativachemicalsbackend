@@ -2,7 +2,7 @@ const Person=require("../models/personModel")
 const mongoose = require('mongoose');
 const dotenv=require("dotenv")
 
-dotenv.config({path:"./config/config.env"})
+dotenv.config({path:"./.env"})
 
 
 exports.createPerson = async(req,res,next)=>{
