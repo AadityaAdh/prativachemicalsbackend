@@ -23,7 +23,7 @@ exports.getAllproducts = async(req,res)=>{
     let client = await connectRedis();
     const redisproduct= await client.get("allproducts")
     if(redisproduct){
-        //console.log("from redis")
+        console.log("from redis")
         //client.del("allproducts")
         
         //redis le data jailae ni string from mai store garxa so string lai json ma convert garna json.parse
@@ -31,7 +31,7 @@ exports.getAllproducts = async(req,res)=>{
 
     }
     else{
-        //console.log("from mongo")
+        console.log("from mongo")
 
     
     
