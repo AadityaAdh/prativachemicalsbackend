@@ -23,17 +23,20 @@ exports.getAllproducts = async(req,res)=>{
     let client = await connectRedis();
     const redisproduct= await client.get("allproducts")
     if(redisproduct){
+        //console.log("from redis")
+        //client.del("allproducts")
         
         //redis le data jailae ni string from mai store garxa so string lai json ma convert garna json.parse
         res.status(200).json(JSON.parse(redisproduct))
 
     }
     else{
+        //console.log("from mongo")
 
     
     
         const product=await Product.find()
-        await client.set("allproducts",JSON.stringify(product),"EX",3600)
+        await client.set("allproducts",JSON.stringify(product),"EX",100)
         res.status(200).json(product)
     }
 }
