@@ -36,7 +36,7 @@ exports.getAllproducts = async(req,res)=>{
     
     
         const product=await Product.find()
-        await client.set("allproducts",JSON.stringify(product),"EX",100)
+        await client.set("allproducts",JSON.stringify(product),{EX:10})
         res.status(200).json(product)
     }
 }
