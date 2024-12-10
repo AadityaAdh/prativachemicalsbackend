@@ -26,6 +26,7 @@ exports.getAllproducts = async(req,res)=>{
         console.log("from redis")
         //client.del("allproducts")
         
+        
         //redis le data jailae ni string from mai store garxa so string lai json ma convert garna json.parse
         res.status(200).json(JSON.parse(redisproduct))
 
